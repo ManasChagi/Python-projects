@@ -1,10 +1,8 @@
 import pandas
 df = pandas.read_csv("nato_phonetic_alphabet.csv")
 print("Welcome to Alphabet - Phonetic conversion")
-
 phonetic_dict = { row.letter : row.code for (index, row) in df.iterrows()}
 
-#TODO 2. Create a list of the phonetic code words from a word that the user inputs.
 def generate_phonetic():
     try:
         user_input = input("Enter a word: ").upper()
@@ -15,9 +13,8 @@ def generate_phonetic():
         generate_phonetic()
     else:
         print(output_list)
-
+        
 generate_phonetic()
-
 
 # Method- 1
 # new =[]
